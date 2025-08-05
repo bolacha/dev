@@ -1,0 +1,6 @@
+{
+    "type": "kustomize",
+    "name": "whoami",
+    "project": "dev",
+    "path": "apps/whoami/overlays/dev"
+}
