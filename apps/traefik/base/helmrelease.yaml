@@ -13,12 +13,8 @@ spec:
     chart: traefik
     targetRevision: 37.0.0
     helm:
-      values: |
-        ingressClass:
-          enabled: true
-          isDefaultClass: true
-        service:
-          type: NodePort
+      valueFiles:
+        - apps/traefik/base/values.yaml
   syncPolicy:
     automated:
       prune: true
