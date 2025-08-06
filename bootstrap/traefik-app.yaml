@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://traefik.github.io/charts
+    repoURL: https://helm.traefik.io/traefik
     chart: traefik
     targetRevision: 37.0.0
     helm:
