@@ -1,0 +1,8 @@
+apiVersion: helm.k3s.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: traefik
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    externalTrafficPolicy: Local
