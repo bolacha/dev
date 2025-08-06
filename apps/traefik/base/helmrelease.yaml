@@ -18,9 +18,6 @@ spec:
           type: NodePort
         ingressClass:
           enabled: true
-      additionalArguments:
-      - "--entrypoints.web.http.redirections.entrypoint.to=web"
-      - "--entrypoints.web.http.redirections.entrypoint.scheme=http"
   syncPolicy:
     automated:
       prune: true
