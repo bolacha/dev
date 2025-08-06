@@ -1,5 +1,7 @@
 # Configure Network Ports and EntryPoints
 # EntryPoints are the network listeners for incoming traffic.
+service:
+  type: NodePort
 ports:
   # Defines the HTTP entry point named 'web'
   web:
