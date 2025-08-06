@@ -10,17 +10,10 @@ configMapGenerator:
       usernameSecret:
         key: git_username
         name: autopilot-secret
+  - server.insecure="true"
   name: argocd-cm
 kind: Kustomization
 namespace: argocd
 resources:
 - github.com/argoproj-labs/argocd-autopilot/manifests/base?ref=v0.4.19
 - argocd-ingress.yaml
-patches:
-- patch: |-
-    - op: add
-      path: /spec/template/spec/containers/0/command/-
-      value: --insecure
-  target:
-    kind: Deployment
-    name: argocd-server
