@@ -19,6 +19,8 @@ spec:
         ingressClass:
           enabled: true
           isDefaultClass: true
+        forwardedHeaders:
+          insecure: true
         logs:
           general:
             level: INFO
