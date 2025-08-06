@@ -10,7 +10,7 @@ data:
     no-autoupdate: true
     ingress:
     - hostname: "*.bolacha.dev"
-      service: http://traefik.kube-system.svc.cluster.local:80
+      service: https://traefik.kube-system.svc.cluster.local:443
       originRequest:
         noTLSVerify: true
     - service: http_status:404
