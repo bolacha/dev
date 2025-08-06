@@ -9,8 +9,16 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://github.com/bolacha/dev.git
-    path: apps/traefik
+    repoURL: https://traefik.github.io/charts
+    chart: traefik
+    targetRevision: 24.0.0
+    helm:
+      values: |
+        ingressClass:
+          enabled: true
+          isDefaultClass: true
+        service:
+          type: LoadBalancer
   syncPolicy:
     automated:
       prune: true
