@@ -1,0 +1,6 @@
+# apps/traefik/values.yaml
+ingressClass:
+  enabled: true
+  isDefaultClass: true
+service:
+  type: LoadBalancer
