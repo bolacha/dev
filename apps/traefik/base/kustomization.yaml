@@ -1,3 +1,0 @@
-resources:
-  - traefik-namespace.yaml
-  - helmrelease.yaml

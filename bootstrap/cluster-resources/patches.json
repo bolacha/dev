@@ -1,0 +1,4 @@
+{
+    "name": "patches",
+    "server": "https://kubernetes.default.svc"
+}
