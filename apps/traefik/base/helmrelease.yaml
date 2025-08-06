@@ -18,17 +18,9 @@ spec:
           type: NodePort
         ingressClass:
           enabled: true
-          isDefaultClass: true
-        forwardedHeaders:
-          insecure: true
-        logs:
-          general:
-            level: INFO
-          access:
-            enabled: true
-        metrics:
-          prometheus:
-            enabled: true
+      additionalArguments:
+      - "--entrypoints.web.http.redirections.entrypoint.to=web"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=http"
   syncPolicy:
     automated:
       prune: true
